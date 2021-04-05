@@ -3,6 +3,7 @@ Rails.application.routes.draw do
       resources :admin_users
       resources :views
       resources :home
+      resources :text
 
       root to: "admin_users#index"
     end
