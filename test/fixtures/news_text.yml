@@ -2,8 +2,6 @@
 
 one:
   original: MyString
-  formatted: MyString
 
 two:
   original: MyString
-  formatted: MyString

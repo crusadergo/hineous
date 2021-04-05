@@ -1,0 +1,2 @@
+module NewsTextHelper
+end

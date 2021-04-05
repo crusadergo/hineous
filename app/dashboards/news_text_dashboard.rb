@@ -1,6 +1,6 @@
 require "administrate/base_dashboard"
 
-class TextDashboard < Administrate::BaseDashboard
+class NewsTextDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -9,8 +9,6 @@ class TextDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
-    original: Field::String,
-    formatted: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -22,17 +20,14 @@ class TextDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
     id
-    original
-    formatted
     created_at
+    updated_at
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
     id
-    original
-    formatted
     created_at
     updated_at
   ].freeze
@@ -41,8 +36,7 @@ class TextDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
-    original
-    formatted
+
   ].freeze
 
   # COLLECTION_FILTERS
@@ -57,10 +51,10 @@ class TextDashboard < Administrate::BaseDashboard
   #   }.freeze
   COLLECTION_FILTERS = {}.freeze
 
-  # Overwrite this method to customize how text are displayed
+  # Overwrite this method to customize how news text are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(text)
-  #   "Text ##{text.id}"
+  # def display_resource(news_text)
+  #   "NewsText ##{news_text.id}"
   # end
 end
